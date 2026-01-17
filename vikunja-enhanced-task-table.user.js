@@ -4,7 +4,8 @@
 // @version      0.6.0
 // @description  Adds inline editing, bulk actions, drag & drop, and other UI enhancements to Vikunja task tables.
 // @author       Plong-Wasin
-// @match        https://vikunja.*/*
+// @match        https://try.vikunja.io/*
+// @match        https://vikunja.gitclab.ru/*
 // @grant        GM_xmlhttpRequest
 // @grant        GM_addStyle
 // @updateURL    https://raw.githubusercontent.com/seorgiy/vikunja-enhancements/refs/heads/main/vikunja-enhanced-task-table.user.js
