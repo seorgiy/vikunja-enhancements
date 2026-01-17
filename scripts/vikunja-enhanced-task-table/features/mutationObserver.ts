@@ -16,7 +16,7 @@ import { reorderTaskRows } from './bulkSelectionAndDragDrop';
 const observerConfig = { attributes: true, childList: true, subtree: true };
 
 export async function handleDomMutations(observer: MutationObserver): Promise<void> {
-    debouncedUpdateTaskAddFormVisibility();
+    // debouncedUpdateTaskAddFormVisibility();
 
     if (!document.querySelector('table tbody tr td') || !document.querySelector('.columns-filter')) {
         return;
@@ -37,7 +37,7 @@ export async function handleDomMutations(observer: MutationObserver): Promise<vo
     observer.observe(document.body, observerConfig);
 }
 
-const debouncedUpdateTaskAddFormVisibility = debounce(() => updateTaskAddFormVisibility(), 300);
+// const debouncedUpdateTaskAddFormVisibility = debounce(() => updateTaskAddFormVisibility(), 300);
 
 function getAllTaskIds(): number[] {
     const links = document.querySelectorAll<HTMLAnchorElement>('tbody tr a');
