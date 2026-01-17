@@ -58,7 +58,7 @@ function createLabelsMenuElement(): HTMLDivElement {
         position: 'absolute',
         display: 'none',
         background: 'var(--scheme-main)',
-        border: '1px solid #ccc',
+        border: '1px solid var(--button-focus-border-color)',
         width: '250px',
         zIndex: '10000',
         boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
@@ -80,8 +80,8 @@ function createLabelsMenuElement(): HTMLDivElement {
     control.className = 'control';
     Object.assign(control.style, {
         padding: '5px',
-        borderBottom: '1px solid #ccc',
-        borderTop: '1px solid #ccc'
+        // borderBottom: '1px solid #ccc',
+        // borderTop: '1px solid #ccc'
     });
 
     const inputWrapper = document.createElement('div');

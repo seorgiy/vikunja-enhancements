@@ -45,8 +45,14 @@ document.addEventListener('click', (event) => {
     } else if (event.ctrlKey || event.metaKey) {
         clickedRow.classList.toggle('bulk-selected');
     } else {
-        allRows.forEach((row) => row.classList.remove('bulk-selected'));
-        clickedRow.classList.add('bulk-selected');
+        const wasSelected = clickedRow.classList.contains('bulk-selected');
+        let selectedQty = 0;
+        allRows.forEach((row) => 
+        {
+            if (row.classList.contains('bulk-selected')) { selectedQty++};
+            row.classList.remove('bulk-selected')
+        });
+        clickedRow.classList.toggle('bulk-selected', !wasSelected || selectedQty > 1);
     }
 
     allRows.forEach((row) => row.classList.remove('last-clicked'));

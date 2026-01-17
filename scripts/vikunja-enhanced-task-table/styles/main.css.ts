@@ -1,4 +1,22 @@
 GM_addStyle(`
+    select.priority-select:not(:hover) {
+       border-color: transparent !important;
+       background: transparent;
+    }
+    select.priority-select:not(:hover) > option {
+        background: var(--input-background-color);
+    }
+    .select:not(.is-multiple):not(.is-loading):after  {
+      border: none !important;
+    }
+    .project-table {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
     body:has(.columns-filter) {
         .edit-title {
             border: none;
@@ -30,9 +48,6 @@ GM_addStyle(`
         .search-results button:hover {
             background-color: var(--table-row-hover-background-color);
         }
-        tbody tr td.column-title {
-            padding-left: calc(0.75em + 20px * var(--level, 0));
-        }  
         .is-done {
             background: var(--success);
             color: var(--white);
