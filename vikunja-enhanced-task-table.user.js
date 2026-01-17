@@ -15,6 +15,10 @@
 (() => {
   // scripts/vikunja-enhanced-task-table/styles/main.css.ts
   GM_addStyle(`
+    td.enhanced {
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
     select.priority-select:not(:hover) {
        border-color: transparent !important;
        background: transparent;
